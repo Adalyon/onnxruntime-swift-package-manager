@@ -43,6 +43,7 @@ let package = Package(
                             "include/ort_checkpoint.h",
                             "include/ort_training_session.h",
                             "include/onnxruntime_training.h"],
+                resources: [.process("Info.plist")],
                 cxxSettings: [
                     .define("SPM_BUILD"),
                 ]),
