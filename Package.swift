@@ -1,4 +1,4 @@
-// swift-tools-version: 5.6
+// swift-tools-version: 5.10
 //   The swift-tools-version declares the minimum version of Swift required to build this package and MUST be the first
 //   line of this file. 5.6 is required to support zip files for the pod archive binaryTarget.
 //
@@ -20,7 +20,7 @@ import class Foundation.ProcessInfo
 
 let package = Package(
     name: "onnxruntime",
-    platforms: [.iOS(.v12),
+    platforms: [.iOS(.v17),
                 .macOS(.v11)],
     products: [
         .library(name: "onnxruntime",
@@ -43,7 +43,6 @@ let package = Package(
                             "include/ort_checkpoint.h",
                             "include/ort_training_session.h",
                             "include/onnxruntime_training.h"],
-                resources: [.process("Info.plist")],
                 cxxSettings: [
                     .define("SPM_BUILD"),
                 ]),
